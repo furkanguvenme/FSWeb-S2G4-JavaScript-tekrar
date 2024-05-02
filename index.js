@@ -132,11 +132,25 @@ besyuzdenkucuksayilar = sayilar.filter((j) => j < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 
 // 3f çözümü
-
-/* kodlar buraya */
+tekraredensayilar = [];
+const tekrarSayilar = {};
+sayilar.forEach((arr) => {
+  if (tekrarSayilar[arr]) {
+    tekrarSayilar[arr]++;
+  } else {
+    tekrarSayilar[arr] = 1;
+  }
+});
+for (const sayi in tekrarSayilar) {
+  if (tekrarSayilar[sayi]) {
+    tekraredensayilar.push(
+      `${sayi} sayısı ${tekrarSayilar[sayi]} kere tekrar edilmiştir`
+    );
+  }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
